@@ -14,7 +14,7 @@ namespace ConsumoDeVeiculos.Models
         public string Descricao { get; set; }
 
         [Required]
-        public DataType Data { get; set; }
+        public DateTime Data { get; set; }
 
         public int Km { get; set; }
 
