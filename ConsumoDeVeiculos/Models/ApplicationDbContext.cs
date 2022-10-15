@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ConsumoDeVeiculos.Models;
 
 namespace ConsumoDeVeiculos.Models
 {
@@ -7,9 +8,11 @@ namespace ConsumoDeVeiculos.Models
         public ApplicationDbContext()
         {
         }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
 
+        public DbSet<Veiculo> Veiculos { get; set; }
     }
 }
