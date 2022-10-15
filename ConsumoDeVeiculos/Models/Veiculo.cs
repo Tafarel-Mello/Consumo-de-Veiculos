@@ -14,5 +14,7 @@ namespace ConsumoDeVeiculos.Models
 
         [Required(ErrorMessage = "Por favor, informe a placa do veiculo")]
         public string Placa { get; set; }
+
+        public ICollection<Consumo> Consumo { get; set; } // Para criar a relacao de consumos com cada veiculo
     }
 }
