@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O0WoPOaQCOwDKvyYKYoUPTs0wUpO1mMH0q/2Xm1A6DCmEP9qMY3kCYwrILKCxwKeEBIVtXSKPSYrXahQq0J3KQ==",
+  "dgSpecHash": "M8v0et8ttBNWXRgSH0CZEWEAqhyNdL2Itd5H/8FgwQnodEV9l0iDrsY5Dl85p36Gu9K6yfhhrmuN3lOrSs3UiQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tafarel\\Documents\\Portfolio\\Repositorios GitHub Pessoal\\ConsumoDeVeiculos\\Consumo_De_Veiculos\\ConsumoDeVeiculos\\ConsumoDeVeiculos.csproj",
+  "projectFilePath": "C:\\Users\\Tafarel\\Documents\\Portfolio\\Repositorios GitHub Pessoal\\ConsumoDeVeiculos\\Consumo-de-Veiculos\\ConsumoDeVeiculos\\ConsumoDeVeiculos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tafarel\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Tafarel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

@@ -2459,11 +2459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tafarel\\Documents\\Portfolio\\Repositorios GitHub Pessoal\\ConsumoDeVeiculos\\Consumo_De_Veiculos\\ConsumoDeVeiculos\\ConsumoDeVeiculos.csproj",
+      "projectUniqueName": "C:\\Users\\Tafarel\\Documents\\Portfolio\\Repositorios GitHub Pessoal\\ConsumoDeVeiculos\\Consumo-de-Veiculos\\ConsumoDeVeiculos\\ConsumoDeVeiculos.csproj",
       "projectName": "ConsumoDeVeiculos",
-      "projectPath": "C:\\Users\\Tafarel\\Documents\\Portfolio\\Repositorios GitHub Pessoal\\ConsumoDeVeiculos\\Consumo_De_Veiculos\\ConsumoDeVeiculos\\ConsumoDeVeiculos.csproj",
+      "projectPath": "C:\\Users\\Tafarel\\Documents\\Portfolio\\Repositorios GitHub Pessoal\\ConsumoDeVeiculos\\Consumo-de-Veiculos\\ConsumoDeVeiculos\\ConsumoDeVeiculos.csproj",
       "packagesPath": "C:\\Users\\Tafarel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tafarel\\Documents\\Portfolio\\Repositorios GitHub Pessoal\\ConsumoDeVeiculos\\Consumo_De_Veiculos\\ConsumoDeVeiculos\\obj\\",
+      "outputPath": "C:\\Users\\Tafarel\\Documents\\Portfolio\\Repositorios GitHub Pessoal\\ConsumoDeVeiculos\\Consumo-de-Veiculos\\ConsumoDeVeiculos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
