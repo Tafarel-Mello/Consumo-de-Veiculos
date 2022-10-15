@@ -8,10 +8,11 @@ namespace ConsumoDeVeiculos.Models
         public ApplicationDbContext()
         {
         }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
-        public DbSet<ConsumoDeVeiculos.Models.Veiculo> Veiculo { get; set; }
 
+        public DbSet<Veiculo> Veiculos { get; set; }
     }
 }

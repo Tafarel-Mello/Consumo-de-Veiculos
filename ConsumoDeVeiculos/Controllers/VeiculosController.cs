@@ -21,18 +21,18 @@ namespace ConsumoDeVeiculos.Controllers
         // GET: Veiculos
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Veiculo.ToListAsync());
+              return View(await _context.Veiculos.ToListAsync());
         }
 
         // GET: Veiculos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Veiculo == null)
+            if (id == null || _context.Veiculos == null)
             {
                 return NotFound();
             }
 
-            var veiculo = await _context.Veiculo
+            var veiculo = await _context.Veiculos
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (veiculo == null)
             {
@@ -67,12 +67,12 @@ namespace ConsumoDeVeiculos.Controllers
         // GET: Veiculos/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Veiculo == null)
+            if (id == null || _context.Veiculos == null)
             {
                 return NotFound();
             }
 
-            var veiculo = await _context.Veiculo.FindAsync(id);
+            var veiculo = await _context.Veiculos.FindAsync(id);
             if (veiculo == null)
             {
                 return NotFound();
@@ -118,12 +118,12 @@ namespace ConsumoDeVeiculos.Controllers
         // GET: Veiculos/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Veiculo == null)
+            if (id == null || _context.Veiculos == null)
             {
                 return NotFound();
             }
 
-            var veiculo = await _context.Veiculo
+            var veiculo = await _context.Veiculos
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (veiculo == null)
             {
@@ -138,14 +138,14 @@ namespace ConsumoDeVeiculos.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Veiculo == null)
+            if (_context.Veiculos == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.Veiculo'  is null.");
+                return Problem("Entity set 'ApplicationDbContext.Veiculos'  is null.");
             }
-            var veiculo = await _context.Veiculo.FindAsync(id);
+            var veiculo = await _context.Veiculos.FindAsync(id);
             if (veiculo != null)
             {
-                _context.Veiculo.Remove(veiculo);
+                _context.Veiculos.Remove(veiculo);
             }
             
             await _context.SaveChangesAsync();
@@ -154,7 +154,7 @@ namespace ConsumoDeVeiculos.Controllers
 
         private bool VeiculoExists(int id)
         {
-          return _context.Veiculo.Any(e => e.Id == id);
+          return _context.Veiculos.Any(e => e.Id == id);
         }
     }
 }
