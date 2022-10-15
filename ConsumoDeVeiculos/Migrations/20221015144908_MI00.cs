@@ -1,13 +1,28 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace ConsumoDeVeiculos.Migrations
 {
-    public partial class MI01 : Migration
+    public partial class MI00 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Veiculos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Placa = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Veiculos", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Consumos",
                 columns: table => new
@@ -15,7 +30,7 @@ namespace ConsumoDeVeiculos.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Data = table.Column<int>(type: "int", nullable: false),
+                    Data = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Km = table.Column<int>(type: "int", nullable: false),
                     Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Combustivel = table.Column<int>(type: "int", nullable: false),
@@ -42,6 +57,9 @@ namespace ConsumoDeVeiculos.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Consumos");
+
+            migrationBuilder.DropTable(
+                name: "Veiculos");
         }
     }
 }
