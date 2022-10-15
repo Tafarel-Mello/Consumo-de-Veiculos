@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace My_Second_MVC.Models
+namespace ConsumoDeVeiculos.Models
 {
     [Table("Veiculos")]
     public class Veiculo
@@ -18,6 +14,5 @@ namespace My_Second_MVC.Models
 
         [Required(ErrorMessage = "Por favor, informe a placa do veiculo")]
         public string Placa { get; set; }
-        public ICollection<Consumo> Consumos { get; set; }
     }
 }
