@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ConsumoDeVeiculos.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221015123737_MI00")]
+    [Migration("20221015130258_MI00")]
     partial class MI00
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
