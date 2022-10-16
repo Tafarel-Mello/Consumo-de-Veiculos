@@ -14,5 +14,8 @@ namespace ConsumoDeVeiculos.Models
 
         [Required(ErrorMessage = "Por favor, informe a placa do veiculo")]
         public string Placa { get; set; }
+
+        
     }
+   
 }

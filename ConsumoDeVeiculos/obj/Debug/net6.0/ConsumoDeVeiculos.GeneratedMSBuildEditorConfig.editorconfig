@@ -15,6 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Tafarel\Documents\Portfolio\Repositorios GitHub Pessoal\ConsumoDeVeiculos\Consumo-de-Veiculos\ConsumoDeVeiculos
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Tafarel/Documents/Portfolio/Repositorios GitHub Pessoal/ConsumoDeVeiculos/Consumo-de-Veiculos/ConsumoDeVeiculos/Views/Consumo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3Vtb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tafarel/Documents/Portfolio/Repositorios GitHub Pessoal/ConsumoDeVeiculos/Consumo-de-Veiculos/ConsumoDeVeiculos/Views/Consumo/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3Vtb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tafarel/Documents/Portfolio/Repositorios GitHub Pessoal/ConsumoDeVeiculos/Consumo-de-Veiculos/ConsumoDeVeiculos/Views/Consumo/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3Vtb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tafarel/Documents/Portfolio/Repositorios GitHub Pessoal/ConsumoDeVeiculos/Consumo-de-Veiculos/ConsumoDeVeiculos/Views/Consumo/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3Vtb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tafarel/Documents/Portfolio/Repositorios GitHub Pessoal/ConsumoDeVeiculos/Consumo-de-Veiculos/ConsumoDeVeiculos/Views/Consumo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3Vtb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Tafarel/Documents/Portfolio/Repositorios GitHub Pessoal/ConsumoDeVeiculos/Consumo-de-Veiculos/ConsumoDeVeiculos/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
