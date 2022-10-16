@@ -56,16 +56,19 @@ namespace ConsumoDeVeiculos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Descricao,Data,Km,Valor,Combustivel,VeiculoId")] Consumo consumo)
+        public async Task<IActionResult> Create([Bind("Descricao,Data,Km,Valor,Combustivel,VeiculoId")] Consumo consumo)
         {
-            if (ModelState.IsValid)
+            _context.Add(new Consumo()
             {
-                _context.Add(consumo);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["VeiculoId"] = new SelectList(_context.Veiculos, "Id", "Nome", consumo.VeiculoId);
-            return View(consumo);
+                Descricao = consumo.Descricao,
+                Data = consumo.Data,
+                Km = consumo.Km,
+                Valor = consumo.Valor,
+                Combustivel = consumo.Combustivel,
+                VeiculoId = consumo.VeiculoId
+            });
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Consumo/Edit/5
@@ -154,14 +157,14 @@ namespace ConsumoDeVeiculos.Controllers
             {
                 _context.Consumo.Remove(consumo);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ConsumoExists(int id)
         {
-          return _context.Consumo.Any(e => e.Id == id);
+            return _context.Consumo.Any(e => e.Id == id);
         }
     }
 }

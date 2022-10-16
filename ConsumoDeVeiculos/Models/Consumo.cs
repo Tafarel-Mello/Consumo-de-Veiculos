@@ -29,7 +29,7 @@ namespace ConsumoDeVeiculos.Models
         [Display(Name ="Veiculo")]
         public int VeiculoId { get; set; }
 
-        [ForeignKey("VeiculoId")]
+        
         public Veiculo Veiculo { get; set; }
 
     }
