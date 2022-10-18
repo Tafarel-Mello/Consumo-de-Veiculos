@@ -24,6 +24,7 @@ namespace ConsumoDeVeiculos.Controllers
               return View(await _context.Veiculos.ToListAsync());
         }
 
+
         // GET: Veiculo/Details/5
         public async Task<IActionResult> Details(int? id)
         {
