@@ -23,6 +23,27 @@ namespace ConsumoDeVeiculos.Controllers
             return View();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Login([Bind("Id, Senha")]Usuario usuario)
+        {
+            var user = await _context.Usuario.FirstOrDefaultAsync(m => m.Id == usuario.Id);
+
+            if(user == null)
+            {
+                ViewBag.Message = "Usuario ou senha invalidos";
+                return View();
+            }
+
+            bool isSenhaOk = BCrypt.Net.BCrypt.Verify(usuario.Senha, user.Senha);
+
+            if (isSenhaOk)
+            {
+                ViewBag.Message = "Usuario Ok";
+            }
+
+            return View();
+        }
+
 
 
         // GET: Usuarios
