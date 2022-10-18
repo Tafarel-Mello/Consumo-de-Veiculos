@@ -18,6 +18,13 @@ namespace ConsumoDeVeiculos.Controllers
             _context = context;
         }
 
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+
+
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
@@ -57,6 +64,7 @@ namespace ConsumoDeVeiculos.Controllers
         {
             if (ModelState.IsValid)
             {
+                usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -96,6 +104,7 @@ namespace ConsumoDeVeiculos.Controllers
             {
                 try
                 {
+                    usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                     _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }

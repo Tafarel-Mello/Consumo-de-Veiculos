@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0HIAaKtrarxJWVjsenyii4PqEmfejFE9QlkKFluaL3qzh4elOT2+1bNrSvMSQoe0c4V72MZ/bVVhALTUr1i8Uw==",
+  "dgSpecHash": "2if9yEyZXjtEHWJyNuudqNlbSkeBJwkxn36C9FF/yzV9uqQB11bWT+RPYF7uLBT1j7JlU1lwazj+U5gv997Qng==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tafarel\\Documents\\Portfolio\\Repositorios GitHub Pessoal\\ConsumoDeVeiculos\\Consumo-de-Veiculos\\ConsumoDeVeiculos\\ConsumoDeVeiculos.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Tafarel\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Tafarel\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Tafarel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Tafarel\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

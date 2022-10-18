@@ -17,13 +17,14 @@ namespace ConsumoDeVeiculos.Models
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Digite sua senha")]
+        [DataType(DataType.Password)]
         public string Senha { get; set; }
 
-        public Perfil Perfil { get; set; }
+        public TipoPerfil Perfil { get; set; }
 
     }
 
-    public enum Perfil
+    public enum TipoPerfil
     {
         Admin,
         Usuario
