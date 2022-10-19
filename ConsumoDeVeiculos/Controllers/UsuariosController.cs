@@ -18,25 +18,25 @@ namespace ConsumoDeVeiculos.Controllers
             _context = context;
         }
 
-        public IActionResult Login()
+        public IActionResult Login() // controle direcional para pagina de login
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login([Bind("Id, Senha")]Usuario usuario)
+        public async Task<IActionResult> Login([Bind("Nome, Senha")]Usuario usuario) // Validacao de credenciais de login
         {
-            var user = await _context.Usuario.FirstOrDefaultAsync(m => m.Id == usuario.Id);
+            var user = await _context.Usuario.FirstOrDefaultAsync(m => m.Nome == usuario.Nome);
 
-            if(user == null)
+            if(user == null) // validacao de usuario registrado
             {
                 ViewBag.Message = "Usuario ou senha invalidos";
                 return View();
             }
 
-            bool isSenhaOk = BCrypt.Net.BCrypt.Verify(usuario.Senha, user.Senha);
+            bool isSenhaOk = BCrypt.Net.BCrypt.Verify(usuario.Senha, user.Senha); // verifica criptografia da senha
 
-            if (isSenhaOk)
+            if (isSenhaOk) // validacao de senha
             {
                 ViewBag.Message = "Usuario Ok";
             }
