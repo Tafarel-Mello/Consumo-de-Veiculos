@@ -23,9 +23,13 @@
 						<li class="nav-item">
 							<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
 						</li>
+
+						
 						<li class="nav-item">
 							<a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuario</a>
 						</li>
+						
+
 						<li class="nav-item">
 							<a class="nav-link text-dark" asp-area="" asp-controller="Veiculo" asp-action="Index">Veiculos</a>
 						</li>
@@ -40,11 +44,17 @@
 							<li class="nav-item">
 								Ola, @User.Identity.Name
 							</li>
+							<li class="nav-item">
+								<a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Logout"><span class="btn btn-success">Sair</span></a>
+							</li>
 						}
 						else
 						{
 							<li class="nav-item">
 								<a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Login"><span class="btn btn-success">Entrar</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Create"><span class="btn btn-success">Cadastrar</span></a>
 							</li>
 						}
 

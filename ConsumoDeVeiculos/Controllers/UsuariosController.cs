@@ -68,6 +68,12 @@ namespace ConsumoDeVeiculos.Controllers
             return View();
         }
 
+        public async Task<IActionResult> Logout() // logout
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Login", "Usuarios");
+        }
+
         public IActionResult AccessDenied()
         {
             return View();
