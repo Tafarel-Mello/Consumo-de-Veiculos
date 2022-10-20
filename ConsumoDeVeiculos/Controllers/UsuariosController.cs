@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ConsumoDeVeiculos.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
 
 namespace ConsumoDeVeiculos.Controllers
 {
@@ -24,7 +26,7 @@ namespace ConsumoDeVeiculos.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login([Bind("Nome, Senha")]Usuario usuario) // Validacao de credenciais de login
+        public async Task<IActionResult> Login([Bind("Nome, Senha")] Usuario usuario) // Validacao de credenciais de login
         {
             var user = await _context.Usuario.FirstOrDefaultAsync(m => m.Nome == usuario.Nome);
 
@@ -38,9 +40,36 @@ namespace ConsumoDeVeiculos.Controllers
 
             if (isSenhaOk) // validacao de senha
             {
-                ViewBag.Message = "Usuario Ok";
+
+                var claims = new List<Claim> // credenciais para login
+                {
+                    new Claim(ClaimTypes.Name, user.Nome),
+                    new Claim(ClaimTypes.NameIdentifier, user.Nome),
+                    new Claim(ClaimTypes.Role, user.Perfil.ToString())
+                };
+
+                var userIdentity = new ClaimsIdentity(claims, "login");
+
+                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+
+                var props = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    ExpiresUtc = DateTime.Now.ToLocalTime().AddDays(7),
+                    IsPersistent = true
+                };
+
+                await HttpContext.SignInAsync(principal, props);
+
+                return Redirect("/");
             }
 
+            ViewBag.Message = "Usuario ou senha invalidos";
+            return View();
+        }
+
+        public IActionResult AccessDenied()
+        {
             return View();
         }
 
