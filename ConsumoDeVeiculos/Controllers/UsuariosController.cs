@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using ConsumoDeVeiculos.Models;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ConsumoDeVeiculos.Controllers
 {
+
     public class UsuariosController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -20,12 +22,14 @@ namespace ConsumoDeVeiculos.Controllers
             _context = context;
         }
 
+        [AllowAnonymous]
         public IActionResult Login() // controle direcional para pagina de login
         {
             return View();
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Login([Bind("Nome, Senha")] Usuario usuario) // Validacao de credenciais de login
         {
             var user = await _context.Usuario.FirstOrDefaultAsync(m => m.Nome == usuario.Nome);
@@ -71,14 +75,14 @@ namespace ConsumoDeVeiculos.Controllers
         public async Task<IActionResult> Logout() // logout
         {
             await HttpContext.SignOutAsync();
-            return RedirectToAction("Login", "Usuarios");
+            return RedirectToAction("Index", "Home");
         }
 
+        [AllowAnonymous]
         public IActionResult AccessDenied()
         {
             return View();
         }
-
 
 
         // GET: Usuarios
@@ -105,6 +109,8 @@ namespace ConsumoDeVeiculos.Controllers
             return View(usuario);
         }
 
+        
+        [AllowAnonymous]
         // GET: Usuarios/Create
         public IActionResult Create()
         {

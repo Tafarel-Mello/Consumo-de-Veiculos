@@ -34,11 +34,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
+app.UseCookiePolicy();
 
 app.UseAuthentication();
 
-app.UseCookiePolicy();
+app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
